@@ -1,0 +1,98 @@
+.header {
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    position: relative;
+    box-shadow: 8px -3px 8px 1px #000;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header--logo h2 {
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    color: $color-pri;
+
+    @include pc {
+        font-size: 1.6rem;
+    }
+}
+
+.navbar .btn-ham {
+    color: $color-pri;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    @include pc {
+        display: none;
+    }
+}
+
+.navbar__container {
+    display: none;
+
+    @include pc {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            display: block;
+
+            @include pc {
+                display: inline-block;
+            }
+
+            a {
+                display: block;
+                padding: 10px 10px;
+                text-decoration: none;
+                color: rgb(163, 163, 163);
+                transition: all 0.3s;
+
+                &:hover {
+                    color: $color-pri;
+                    transition: all 0.3s;
+                }
+
+                ion-icon {
+                    padding-right: 3px;
+                }
+            }
+        }
+    }
+}
+
+.navbar__container ul li a.btn-log {
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    background-color: $color-pri;
+    transition: all 0.3s;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: #fff;
+        outline: 1px solid $color-pri;
+        color: $color-pri;
+        transition: all 0.3s;
+    }
+}
+
+.show-ham {
+    margin-left: 0;
+}
